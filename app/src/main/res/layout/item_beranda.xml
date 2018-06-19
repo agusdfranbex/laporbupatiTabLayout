@@ -1,34 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10sp"
-    android:gravity="center_horizontal"
-    android:layout_gravity="center_horizontal"
+    android:fitsSystemWindows="true"
     android:weightSum="1">
 
-    <ImageView
-        android:id="@+id/img"
-        android:layout_width="150sp"
-        android:layout_height="150sp"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/ic_gambarlapor"/>
-
-    <TextView
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/pelapor"
-        android:text="pelapor"
-        android:textStyle="bold"
-        android:textAlignment="center"/>
+        android:layout_margin="10sp"
+        app:cardCornerRadius="@dimen/cardview_compat_inset_shadow">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pelapor"
+                android:text="pelapor"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"/>
 
-    <TextView
-        android:id="@+id/laporan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="isi laporan"
-        android:textAlignment="center"/>
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_gambarlapor"/>
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/laporan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="isi laporan"
+                android:paddingTop="8sp"
+                android:textAlignment="center"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingEnd="15dp"
+                    android:text="Status"/>
+
+                <ImageView
+                    android:id="@+id/icon_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_status"/>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
