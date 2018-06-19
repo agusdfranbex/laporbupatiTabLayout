@@ -28,8 +28,8 @@ public class Beranda_fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_beranda,container,false);
-        mRecyclerView = (RecyclerView)v.findViewById(R.id.recycleView_id);
-        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(),mBerandaList);
+        mRecyclerView = (RecyclerView)v.findViewById(R.id.recyclerView_beranda);
+        AdapterBERANDA recyclerViewAdapter = new AdapterBERANDA(getContext(),mBerandaList);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecyclerView.setAdapter(recyclerViewAdapter);
         return v;
