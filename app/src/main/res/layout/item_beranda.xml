@@ -12,7 +12,7 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10sp"
+        android:layout_margin="5dp"
         app:cardCornerRadius="@dimen/cardview_compat_inset_shadow">
         <LinearLayout
             android:layout_width="match_parent"
@@ -62,6 +62,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:clickable="true"
+                    android:layout_margin="5dp"
                     android:layout_gravity="center_vertical"
                     android:src="@drawable/ic_status"/>
             </LinearLayout>

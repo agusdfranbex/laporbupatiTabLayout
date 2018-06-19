@@ -1,14 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundfragment">
-    <Button
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Adukan"
-        android:id="@+id/Bt_adukan"/>
+        android:layout_margin="15dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Masukkan Email anda disini "/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:id="@+id/editemail"
+                    android:hint="email"
+                    />
+                <TextView
+                    android:layout_marginTop="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="masukkan nomer telfon"/>
+                <EditText
+                    android:layout_marginTop="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="no telfon"
+                    android:id="@+id/edittelfon"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Laporan anda"
+                    android:layout_marginTop="15sp"/>
+                <EditText
+                    android:layout_marginTop="15sp"
+                    android:id="@+id/editlaporanku"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="laporan anda disini"
+                    android:ems="10"/>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    app:cardCornerRadius="@dimen/appbar_padding_top">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="end"
+                        android:layout_margin="20sp">
+                        <ImageView
+                            android:clickable="true"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_camera_lapor"
+                            android:id="@+id/image_laporkan"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Laporkan"
+                    android:layout_marginTop="15sp"
+                    android:id="@+id/button_laporkan"/>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v7.widget.CardView>
 
 </LinearLayout>

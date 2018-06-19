@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 /**
@@ -14,18 +15,26 @@ import android.widget.Toast;
  */
 
 public class Adukan_fragment extends Fragment {
-    public static final String TAG ="Adukan_fragment";
 
-    private Button btnADUKAN;
-
+    private Button laporkan;
+    private ImageView imgLapor;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_adukan,container,false);
-        btnADUKAN=(Button)view.findViewById(R.id.Bt_adukan);
-        btnADUKAN.setOnClickListener(new View.OnClickListener() {
+        imgLapor=(ImageView)view.findViewById(R.id.image_laporkan);
+        imgLapor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(),"aduan",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"ini tombol upload gambar",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        laporkan =(Button)view.findViewById(R.id.button_laporkan);
+        laporkan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"laporkan",Toast.LENGTH_SHORT).show();
             }
         });
         return view;
